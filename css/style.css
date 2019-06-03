@@ -1,0 +1,429 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:400|Montserrat:600,700,800,900&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Oswald:400,500,600,700&display=swap");
+html {
+  font-family: sans-serif;
+  scroll-behavior: smooth;
+}
+
+html body {
+  margin: 0 auto;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 95vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: whitesmoke;
+  font-family: 'Oswald', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html body .container {
+  background-color: whitesmoke;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80vw;
+      grid-template-columns: 80vw;
+  -ms-grid-rows: 5fr 8fr 1fr;
+      grid-template-rows: 5fr 8fr 1fr;
+      grid-template-areas: 'presentacion' 'main' 'footer';
+}
+
+html body .container .presentacion {
+  /* display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr 2fr;
+            grid-template-areas: 'titulos titulos', 'quien quien';*/
+  grid-area: 'presentacion';
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  background-color: white;
+  margin-top: 9vh;
+  -webkit-box-shadow: 0px 5px 8px  #888888;
+          box-shadow: 0px 5px 8px  #888888;
+  /*Los dos displays me aportan el mismo resultado en pantalla grande, ¿será igual en max-width?*/
+}
+
+html body .container .presentacion .titulos {
+  width: 33%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+html body .container .presentacion .titulos img {
+  width: 18vw;
+  height: auto;
+  -webkit-box-shadow: 0px 5px 8px  #888888;
+          box-shadow: 0px 5px 8px  #888888;
+  transition: all .9s ease-in-out;
+  -webkit-transition: all .9s ease-in-out;
+  -moz-transition: all .9s ease-in-out;
+  -ms-transition: all .9s ease-in-out;
+  -o-transition: all .9s ease-in-out;
+}
+
+html body .container .presentacion .titulos img:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+html body .container .presentacion .titulos a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #59a0e7;
+  font-size: 500;
+  transition: all .4s ease-in-out;
+  -webkit-transition: all .4s ease-in-out;
+  -moz-transition: all .4s ease-in-out;
+  -ms-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+}
+
+html body .container .presentacion .titulos a:hover {
+  color: #333333;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
+
+html body .container .presentacion .quien {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 50%;
+  height: auto;
+}
+
+html body .container .presentacion .quien h1 {
+  font-family: 'Oswald',-apple-system, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 700;
+  font-weight: lighter;
+  color: #5d90c4;
+}
+
+html body .container .presentacion .quien h1 span {
+  /* color:rgb(161, 157, 157);*/
+  color: #333333;
+  letter-spacing: 1px;
+  font-weight: lighter;
+}
+
+html body .container .presentacion .quien h3 {
+  font-weight: lighter;
+  color: #a19d9d;
+  letter-spacing: 4px;
+}
+
+html body .container .presentacion .quien #escrito {
+  font-family: 'Oswald',sans-serif;
+  font-size: 500;
+  font-weight: lighter;
+  line-height: 2;
+}
+
+html body .container .presentacion .datos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body .container .presentacion .datos ul {
+  padding: 0;
+  list-style-type: none;
+}
+
+html body .container .presentacion .datos ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1, 2;
+          order: 1, 2;
+}
+
+html body .container .presentacion .datos ul li span:empty {
+  width: 3vw;
+}
+
+html body .container .presentacion .datos ul li .enunciado {
+  font-weight: lighter;
+  color: #a19d9d;
+}
+
+html body .container .presentacion .datos ul li .respuesta a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #333333;
+}
+
+html body .container .barra {
+  font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 120%;
+  font-weight: bold;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  width: 80vw;
+  padding: 0;
+  margin: 0;
+}
+
+html body .container .barra .navegador {
+  padding: 0;
+  margin: 0;
+  width: 80vw;
+}
+
+html body .container .barra .navegador ul.boton {
+  width: 80vw;
+  height: 10vh;
+  background-color: #285888;
+  padding: 0;
+  margin: 0;
+  -webkit-box-shadow: 1px 2px 5px #333333;
+          box-shadow: 1px 2px 5px #333333;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  list-style-type: none;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  top: 0;
+}
+
+html body .container .barra .navegador ul.boton li {
+  list-style-type: none;
+  transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+}
+
+html body .container .barra .navegador ul.boton li a {
+  text-decoration: none;
+  list-style-type: none;
+  color: #e9e6e6;
+}
+
+html body .container .barra .navegador ul.boton li:hover {
+  list-style-type: none;
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  -o-transform: scale(1.2);
+}
+
+html body .container .barra .navegador ul.boton li:hover a:hover {
+  text-shadow: 0px 1px 5px #3f3f3f;
+  color: #a19d9d;
+}
+
+html body .cuerpo {
+  -ms-grid-columns: 90vw;
+      grid-template-columns: 90vw;
+  -ms-grid-rows: 4fr 4fr;
+      grid-template-rows: 4fr 4fr;
+      grid-template-areas: 'skills' 'educacion';
+}
+
+html body .cuerpo .sec_titulo {
+  width: 80vw;
+  height: 25vh;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+}
+
+html body .cuerpo .sec_titulo h2 {
+  color: #59a0e7;
+  font-family: 'Oswald',sans-serif;
+  font-size: 250%;
+  font-weight: lighter;
+  text-transform: uppercase;
+}
+
+html body .cuerpo #servicios {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+html body .cuerpo #servicios .servicios_skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 35vw;
+  height: auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 8px  #888888;
+          box-shadow: 0px 5px 8px  #888888;
+}
+
+html body .cuerpo #servicios .servicios_skills .tituloBarra {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 33vw;
+  height: auto;
+}
+
+html body .cuerpo #servicios .aditionSkills {
+  width: 44vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 8px  #888888;
+          box-shadow: 0px 5px 8px  #888888;
+}
+
+html body .cuerpo #servicios .aditionSkills .adquiridas {
+  width: 43vw;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+html body .cuerpo #servicios .aditionSkills .adquiridas .cajonAdq {
+  width: 40vw;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+html body footer {
+  grid-area: 'footer';
+}
+
+html body .skills_titulo h2 {
+  width: 10vw;
+  height: auto;
+  margin: auto;
+  color: whitesmoke;
+  font-family: 'Oswald',sans-serif;
+  font-size: 500;
+  font-weight: lighter;
+  border: 1px solid #59a0e7;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 5px 8px  #888888;
+          box-shadow: 0px 5px 8px  #888888;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #0487cc;
+  position: center;
+}
+
+html body .colCanvas {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  width: 45vw;
+  height: auto;
+}
+
+html body .colCanvas canvas {
+  width: 110px;
+  height: 110px;
+  background-color: transparent;
+}
+/*# sourceMappingURL=style.css.map */
